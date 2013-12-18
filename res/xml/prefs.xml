@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" android:summary="AC機能" android:title="AC" android:key="pref">
+    <CheckBoxPreference android:summary="機能を有効化する" android:key="Active" android:title="有効"/>
+    <ListPreference android:title="色の設定" android:key="color"/>
+    
+
+</PreferenceScreen>
