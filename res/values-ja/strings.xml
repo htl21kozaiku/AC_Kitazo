@@ -2,8 +2,8 @@
 <resources>
 
     <string name="hello">Hello World!</string>
-    <string name="app_name">電源接続おしらせサンプル</string>
-    <string name="title_activity_main">電源接続おしらせサンプル</string>
+    <string name="app_name">電源接続おしらせAC</string>
+    <string name="title_activity_main">電源接続おしらせAC</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
 
