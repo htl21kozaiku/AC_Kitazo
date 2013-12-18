@@ -1,4 +1,4 @@
-package com.tappli.android.sample.powerconnectsample;
+package net.seesaa.htl21kozaiku.AC_Kitazo;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
