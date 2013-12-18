@@ -3,6 +3,7 @@ package net.seesaa.htl21kozaiku.AC_Kitazo;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.os.BatteryManager;
 import android.widget.Toast;
 
 public class PowerConnectedReceiver extends BroadcastReceiver {
