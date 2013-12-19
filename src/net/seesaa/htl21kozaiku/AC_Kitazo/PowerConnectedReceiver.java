@@ -10,10 +10,9 @@ public class PowerConnectedReceiver extends BroadcastReceiver {
 
 	@Override
 	public void onReceive(Context context, Intent intent) {
-		//if (Intent.ACTION_POWER_CONNECTED.equals(intent.getAction())) {
-		if (intent.getAction().equals(Intent.ACTION_BATTERY_CHANGED)) {
+		if (Intent.ACTION_POWER_CONNECTED.equals(intent.getAction())) {
 			
-			int plugged = intent.getIntExtra("plugged", BatteryManager.BATTERY_PLUGGED_AC);
+			int plugged = intent.getIntExtra(BatteryManager.EXTRA_PLUGGED, BatteryManager.BATTERY_PLUGGED_AC);
             
             switch (plugged) {
             case BatteryManager.BATTERY_PLUGGED_AC:
@@ -22,6 +21,9 @@ public class PowerConnectedReceiver extends BroadcastReceiver {
             case BatteryManager.BATTERY_PLUGGED_USB:
             	Toast.makeText(context, "Power connected!!!!! plugged usb", Toast.LENGTH_SHORT).show();
                 break;
+            default:
+            	Toast.makeText(context, "Power connected!!!!! plugged " + plugged, Toast.LENGTH_SHORT).show();
+            	break;
             }
             
 		}
