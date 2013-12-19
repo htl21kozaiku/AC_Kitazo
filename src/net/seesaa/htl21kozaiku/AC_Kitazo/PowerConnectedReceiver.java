@@ -1,18 +1,21 @@
 package net.seesaa.htl21kozaiku.AC_Kitazo;
 
+import android.annotation.TargetApi;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.os.BatteryManager;
+import android.os.Build;
 import android.widget.Toast;
 
 public class PowerConnectedReceiver extends BroadcastReceiver {
 
+	@TargetApi(Build.VERSION_CODES.ECLAIR)
 	@Override
 	public void onReceive(Context context, Intent intent) {
 		if (Intent.ACTION_POWER_CONNECTED.equals(intent.getAction())) {
 			
-			int plugged = intent.getIntExtra(BatteryManager.EXTRA_PLUGGED, BatteryManager.BATTERY_PLUGGED_AC);
+			int plugged = intent.getIntExtra(BatteryManager.EXTRA_PLUGGED, -1);
             
             switch (plugged) {
             case BatteryManager.BATTERY_PLUGGED_AC:
