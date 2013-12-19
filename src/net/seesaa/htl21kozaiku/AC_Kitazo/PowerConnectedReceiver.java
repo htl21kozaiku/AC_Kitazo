@@ -15,7 +15,7 @@ public class PowerConnectedReceiver extends BroadcastReceiver {
 	public void onReceive(Context context, Intent intent) {
 		if (Intent.ACTION_POWER_CONNECTED.equals(intent.getAction())) {
 			
-			int plugged = intent.getIntExtra(BatteryManager.EXTRA_PLUGGED, -1);
+			int plugged = intent.getIntExtra("plugged", -1);
             
             switch (plugged) {
             case BatteryManager.BATTERY_PLUGGED_AC:
